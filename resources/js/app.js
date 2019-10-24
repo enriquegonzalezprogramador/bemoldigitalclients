@@ -18,7 +18,7 @@ Vue.component('dashboard', Dashboard);
 Vue.component('no-dashboard', NoDashboard);
 
 // axios
-const baseUrl = 'http://can2.test/api';
+const baseUrl = 'http://can.test/api';
 axios.defaults.baseURL = baseUrl;
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

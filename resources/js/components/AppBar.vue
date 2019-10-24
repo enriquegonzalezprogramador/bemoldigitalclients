@@ -6,7 +6,7 @@
 
     <img src="/img/ac.png" width="45px" height="45px">
 
-    <v-toolbar-title class="ml-4">{{ title }} - ACISTPERU</v-toolbar-title>
+    <v-toolbar-title class="ml-4">AID CORPORACION</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
@@ -20,7 +20,7 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      title: '',
+      title: 'Obras',
     };
   },
   computed: {
