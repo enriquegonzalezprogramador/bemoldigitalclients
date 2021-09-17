@@ -3325,8 +3325,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                this.user.confirmed = true;
                 this.correo = this.user.email;
-                _context.next = 3;
+                _context.next = 4;
                 return this.$http.post('/user', this.user).then(function (res) {
                   window.console.log(res);
                   _this2.mensaje = "Usuario creado exitosamente\n          . Se le ha enviado un correo de confirmacion al correo: . ".concat(_this2.correo);
@@ -3338,7 +3339,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this2.$store.dispatch('snackbar/error', _js_statuses__WEBPACK_IMPORTED_MODULE_1__["default"][err.response.status]);
                 });
 
-              case 3:
+              case 4:
               case "end":
                 return _context.stop();
             }
