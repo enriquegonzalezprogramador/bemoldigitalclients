@@ -1,5 +1,4 @@
 <template>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <v-app-bar app clipped-left color="#0078AA" dark flat
   >
     <v-app-bar-nav-icon @click="() => { this.$emit('toggle-drawer') }"
