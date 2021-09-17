@@ -18,7 +18,7 @@ Vue.component('dashboard', Dashboard);
 Vue.component('no-dashboard', NoDashboard);
 
 // axios
-const baseUrl = 'https://localhost/api';
+const baseUrl = 'https://bemoldigitalclients/api/';
 
 axios.defaults.baseURL = baseUrl;
 
