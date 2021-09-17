@@ -104,6 +104,7 @@ export default {
       if (this.$refs.form.validate()) this.store();
     },
     store() {
+      this.user.confirmed=this.user.email;
       this.$http.post('/user', this.user)
         .then((res) => {
           this.$store.dispatch('snackbar/success', 'Usuario creado exitosamente');

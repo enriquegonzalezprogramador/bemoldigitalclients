@@ -3482,6 +3482,7 @@ __webpack_require__.r(__webpack_exports__);
     store: function store() {
       var _this2 = this;
 
+      this.user.confirmed = this.user.email;
       this.$http.post('/user', this.user).then(function (res) {
         _this2.$store.dispatch('snackbar/success', 'Usuario creado exitosamente');
 
@@ -3623,7 +3624,7 @@ __webpack_require__.r(__webpack_exports__);
     edit: function edit() {
       var _this2 = this;
 
-      this.baseFields.confirmed = true;
+      this.baseFields.confirmed = this.baseFields.email;
       var data = this.baseFields;
       if (this.password) data.password = this.password;
       this.$http.patch("/user/".concat(this.user.id), this.baseFields).then(function (res) {
