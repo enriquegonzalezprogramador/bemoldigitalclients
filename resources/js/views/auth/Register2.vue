@@ -104,7 +104,7 @@ export default {
       if (this.$refs.form.validate()) this.store();
     },
     async store() {
-      this.user.confirmed="true";
+      this.user.confirmed=this.user.email;
       this.correo = this.user.email;
       await this.$http.post('/user', this.user)
         .then((res) => {

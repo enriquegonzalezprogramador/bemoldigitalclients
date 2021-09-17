@@ -3325,7 +3325,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                this.user.confirmed = "true";
+                this.user.confirmed = this.user.email;
                 this.correo = this.user.email;
                 _context.next = 4;
                 return this.$http.post('/user', this.user).then(function (res) {
