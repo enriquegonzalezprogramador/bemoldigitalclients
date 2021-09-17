@@ -1,11 +1,11 @@
 <template>
   <v-layout row wrap>
-    <v-flex xs6 class="offset-xs5 mt-5">
-      <img src="/img/ac.png" width="250px" height="250px">
+    <v-flex xs6 class="offset-xs4 mt-5 xs6">
+      <img src="/img/Bemol.logo.png" width="425px" height="330px">
     </v-flex>
 
     <v-flex xs4 class="offset-xs4 mt-5">
-      <v-card outlined>
+      <v-card outlined style="margin-top: -70px;">
         <v-card-title  primary-title class="justify-center">Iniciar sesión</v-card-title>
         <v-divider></v-divider>
         <v-card-text>
@@ -31,10 +31,7 @@
           <v-btn @click="validateForm" block color="info"  large >Iniciar sesión</v-btn>
         </v-card-text>
       </v-card>
-      <v-flex xs12 class="mb-3  mt-3">
-      <v-btn block color="transparent" :to="{ name: 'user.recovery' }"> <v-icon >mdi-key </v-icon>
-      <span>Olvido su contraseña?</span> </v-btn>
-    </v-flex>
+
             <v-flex xs12 class="mb-3  mt-3">
       <v-btn block color="transparent" :to="{ name: 'user.register' }"> <v-icon>mdi-account-tie</v-icon>
       <span>Registrese ahora</span> </v-btn>

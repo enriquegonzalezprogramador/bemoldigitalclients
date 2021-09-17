@@ -15,4 +15,4 @@
 //     return view('welcome');
 // });
 
-Route::get('/{any}', 'SPAController@index')->where('any', '.*');
+Route::get('/{any}', 'User\Controllers\SPAController@index')->where('any', '.*');
