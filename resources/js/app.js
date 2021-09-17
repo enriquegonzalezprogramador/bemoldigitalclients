@@ -18,11 +18,11 @@ Vue.component('dashboard', Dashboard);
 Vue.component('no-dashboard', NoDashboard);
 
 // axios
-const baseUrl = 'https://bemoldigitalclients/api/';
+const baseUrl = 'https://bemoldigitalclients/api';
 
-axios.defaults.baseURL = baseUrl;
+windows.axios.defaults.baseURL = baseUrl;
 
-axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+windows.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 const crsfToken = document.head.querySelector('meta[name="csrf-token"]');
 if (crsfToken) {
