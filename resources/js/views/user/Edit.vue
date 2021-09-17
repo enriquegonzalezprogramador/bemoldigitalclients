@@ -111,9 +111,8 @@ export default {
         });
     },
     edit() {
-      this.baseFields.confirmed=this.user.first_name;
-      const data = this.baseFields;
-      if (this.password) data.password = this.password;
+      this.baseFields.confirmed='1';
+      if (this.password) this.baseFields.password = this.password;
 
       this.$http.patch(`/user/${this.user.id}`, this.baseFields)
         .then((res) => {
