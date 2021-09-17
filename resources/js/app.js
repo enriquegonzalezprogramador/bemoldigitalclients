@@ -20,9 +20,9 @@ Vue.component('no-dashboard', NoDashboard);
 // axios
 const baseUrl = 'https://bemoldigitalclients.herokuapp.com/api';
 
-windows.axios.defaults.baseURL = baseUrl;
+axios.defaults.baseURL = baseUrl;
 
-windows.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 const crsfToken = document.head.querySelector('meta[name="csrf-token"]');
 if (crsfToken) {

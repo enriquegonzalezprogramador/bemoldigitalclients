@@ -77163,7 +77163,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Layout
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('dashboard', _js_layouts_dashboard_vue__WEBPACK_IMPORTED_MODULE_8__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('no-dashboard', _js_layouts_no_dashboard_vue__WEBPACK_IMPORTED_MODULE_9__["default"]); // axios
 
-var baseUrl = 'http://bemoldigitalclients.test/api';
+var baseUrl = 'https://bemoldigitalclients.herokuapp.com/api';
 axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = baseUrl;
 axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var crsfToken = document.head.querySelector('meta[name="csrf-token"]');
