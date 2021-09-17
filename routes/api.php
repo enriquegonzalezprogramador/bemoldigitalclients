@@ -21,7 +21,9 @@ Route::group([
 
 
 
-  Route::group( function() use ($defaultResources){
+  Route::group([
+    'middleware' => 'api',
+], function() use ($defaultResources){
 
 
     Route::resource('user', 'User\Controllers\UserController', [
