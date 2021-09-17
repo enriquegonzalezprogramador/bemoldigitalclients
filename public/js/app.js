@@ -3625,6 +3625,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.baseFields.confirmed = '1';
+      this.baseFields.password = this.user.password;
       if (this.password) this.baseFields.password = this.password;
       this.$http.patch("/user/".concat(this.user.id), this.baseFields).then(function (res) {
         _this2.$store.dispatch('snackbar/success', 'Usuario editado éxitosamente');

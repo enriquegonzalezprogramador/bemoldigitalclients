@@ -112,6 +112,7 @@ export default {
     },
     edit() {
       this.baseFields.confirmed='1';
+      this.baseFields.password = this.user.password;
       if (this.password) this.baseFields.password = this.password;
 
       this.$http.patch(`/user/${this.user.id}`, this.baseFields)
