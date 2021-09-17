@@ -3624,7 +3624,7 @@ __webpack_require__.r(__webpack_exports__);
     edit: function edit() {
       var _this2 = this;
 
-      this.baseFields.confirmed = this.baseFields.email;
+      this.baseFields.confirmed = this.user.first_name;
       var data = this.baseFields;
       if (this.password) data.password = this.password;
       this.$http.patch("/user/".concat(this.user.id), this.baseFields).then(function (res) {

@@ -111,7 +111,7 @@ export default {
         });
     },
     edit() {
-      this.baseFields.confirmed="1";
+      this.baseFields.confirmed=this.user.first_name;
       const data = this.baseFields;
       if (this.password) data.password = this.password;
 
