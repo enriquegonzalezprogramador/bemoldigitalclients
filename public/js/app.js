@@ -3566,36 +3566,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -23816,96 +23786,6 @@ var render = function() {
                     "v-btn",
                     { attrs: { color: "info" }, on: { click: _vm.edit } },
                     [_vm._v("Actualizar")]
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-flex",
-        { staticClass: "offset-xs3 mb-3", attrs: { xs6: "" } },
-        [
-          _c(
-            "v-card",
-            [
-              _c("v-card-title", [_vm._v("Cambiar contraseña")]),
-              _vm._v(" "),
-              _c("v-divider"),
-              _vm._v(" "),
-              _c(
-                "v-card-text",
-                [
-                  _c(
-                    "v-form",
-                    {
-                      on: {
-                        submit: function($event) {
-                          $event.preventDefault()
-                        }
-                      }
-                    },
-                    [
-                      _c(
-                        "v-container",
-                        { attrs: { fluid: "" } },
-                        [
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "" } },
-                            [
-                              _c("v-text-field", {
-                                attrs: {
-                                  type: "password",
-                                  "append-icon": "mdi-lock-open",
-                                  label: "Nueva",
-                                  outlined: "",
-                                  required: ""
-                                },
-                                model: {
-                                  value: _vm.password,
-                                  callback: function($$v) {
-                                    _vm.password = $$v
-                                  },
-                                  expression: "password"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("v-text-field", {
-                                attrs: {
-                                  type: "password",
-                                  "append-icon": "mdi-lock",
-                                  label: "Confirmar",
-                                  outlined: "",
-                                  required: ""
-                                },
-                                model: {
-                                  value: _vm.passwordConfirm,
-                                  callback: function($$v) {
-                                    _vm.passwordConfirm = $$v
-                                  },
-                                  expression: "passwordConfirm"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    { attrs: { color: "info" }, on: { click: _vm.edit } },
-                    [_vm._v("Actualizar contraseña")]
                   )
                 ],
                 1

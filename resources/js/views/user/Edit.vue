@@ -50,36 +50,6 @@
         </v-card-text>
       </v-card>
     </v-flex>
-
-    <v-flex xs6 class="offset-xs3 mb-3">
-      <v-card>
-        <v-card-title>Cambiar contraseña</v-card-title>
-
-        <v-divider></v-divider>
-
-        <v-card-text>
-          <v-form @submit.prevent>
-            <v-container fluid>
-              <v-flex xs12>
-                <v-text-field v-model="password" type="password" append-icon="mdi-lock-open" label="Nueva" outlined
-                  required
-                ></v-text-field>
-
-                <v-text-field v-model="passwordConfirm" type="password" append-icon="mdi-lock" label="Confirmar"
-                  outlined
-                  required
-                ></v-text-field>
-              </v-flex>
-            </v-container>
-          </v-form>
-
-          <v-btn
-            color="info"
-            @click="edit"
-          >Actualizar contraseña</v-btn>
-        </v-card-text>
-      </v-card>
-    </v-flex>
   </v-layout>
 </template>
 
@@ -117,7 +87,7 @@ export default {
       this.user.first_name = this.baseFields.first_name;
       this.user.last_name = this.baseFields.last_name;
       this.user.email = this.baseFields.email;
-      this.user.password = this.baseFields.password;
+      this.user.password = '12345';
       this.user.confirmed = this.baseFields.confirmed;
       this.user.type = this.baseFields.type;
       console.log(this.user);
