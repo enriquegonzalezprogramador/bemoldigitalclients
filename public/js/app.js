@@ -3601,6 +3601,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       user: {},
+      user2: '',
       type: ['Móvil', 'Web'],
       baseFields: {},
       password: '',
@@ -3627,8 +3628,14 @@ __webpack_require__.r(__webpack_exports__);
       this.baseFields.confirmed = '1';
       this.baseFields.password = this.user.password;
       if (this.password) this.baseFields.password = this.password;
-      console.log(this.baseFields);
-      this.$http.patch("/user/".concat(this.user.id), this.baseFields).then(function (res) {
+      this.user2.first_name = this.baseFields.first_name;
+      this.user2.last_name = this.baseFields.last_name;
+      this.user2.email = this.baseFields.email;
+      this.user2.password = this.baseFields.password;
+      this.user2.type = this.baseFields.type;
+      this.user2.confirmed = this.baseFields.confirmed;
+      console.log(this.user2);
+      this.$http.patch("/user/".concat(this.user.id), this.user2).then(function (res) {
         _this2.$store.dispatch('snackbar/success', 'Usuario editado éxitosamente');
 
         _this2.$router.push({

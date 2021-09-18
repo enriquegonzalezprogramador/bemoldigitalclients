@@ -90,6 +90,7 @@ export default {
   data() {
     return {
       user: {},
+      user2: '',
       type: ['Móvil', 'Web'],
       baseFields: {},
       password: '',
@@ -114,9 +115,15 @@ export default {
       this.baseFields.confirmed='1';
       this.baseFields.password = this.user.password;
       if (this.password) this.baseFields.password = this.password;
-      console.log(this.baseFields);
+      this.user2.first_name=this.baseFields.first_name;
+      this.user2.last_name=this.baseFields.last_name;
+      this.user2.email=this.baseFields.email;
+      this.user2.password=this.baseFields.password;
+      this.user2.type=this.baseFields.type;
+      this.user2.confirmed=this.baseFields.confirmed;
+      console.log(this.user2);
 
-      this.$http.patch(`/user/${this.user.id}`, this.baseFields)
+      this.$http.patch(`/user/${this.user.id}`, this.user2)
         .then((res) => {
           this.$store.dispatch('snackbar/success', 'Usuario editado éxitosamente');
           this.$router.push({ name: 'user.show', params: { id: this.user.id } });
