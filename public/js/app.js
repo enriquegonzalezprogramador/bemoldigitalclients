@@ -3626,6 +3626,7 @@ __webpack_require__.r(__webpack_exports__);
       this.baseFields.confirmed = '1';
       this.baseFields.confirmed = '1';
       if (this.password) this.baseFields.password = this.password;
+      console.log(this.baseFields);
       this.user.first_name = this.baseFields.first_name;
       this.user.last_name = this.baseFields.last_name;
       this.user.email = this.baseFields.email;
