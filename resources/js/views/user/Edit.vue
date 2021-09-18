@@ -117,7 +117,7 @@ export default {
       this.user.first_name = this.baseFields.first_name;
       this.user.last_name = this.baseFields.last_name;
       this.user.email = this.baseFields.email;
-      this.user.password = this.baseFields.first_name;
+      this.user.password = this.baseFields.password;
       this.user.confirmed = this.baseFields.confirmed;
       this.user.type = this.baseFields.type;
       console.log(this.user);
