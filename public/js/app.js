@@ -3597,14 +3597,15 @@ __webpack_require__.r(__webpack_exports__);
       this.baseFields.confirmed = '1';
       if (this.password) this.baseFields.password = this.password;
       console.log(this.baseFields);
+      this.user.id = this.baseFields.id;
       this.user.first_name = this.baseFields.first_name;
       this.user.last_name = this.baseFields.last_name;
       this.user.email = this.baseFields.email;
-      this.user.password = this.baseFields.password;
+      this.user.password = '12345';
       this.user.confirmed = this.baseFields.confirmed;
       this.user.type = this.baseFields.type;
       console.log(this.user);
-      this.$http.patch("/user/".concat(this.user.id), this.user).then(function (res) {
+      this.$http.put("/user/".concat(this.user.id), this.user).then(function (res) {
         _this2.$store.dispatch('snackbar/success', 'Usuario editado éxitosamente');
 
         _this2.$router.push({

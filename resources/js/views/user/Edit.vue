@@ -84,6 +84,7 @@ export default {
       this.baseFields.confirmed='1';
       if (this.password) this.baseFields.password = this.password;
       console.log(this.baseFields);
+      this.user.id = this.baseFields.id;
       this.user.first_name = this.baseFields.first_name;
       this.user.last_name = this.baseFields.last_name;
       this.user.email = this.baseFields.email;
@@ -92,7 +93,7 @@ export default {
       this.user.type = this.baseFields.type;
       console.log(this.user);
 
-      this.$http.patch(`/user/${this.user.id}`, this.user)
+      this.$http.put(`/user/${this.user.id}`, this.user)
         .then((res) => {
           this.$store.dispatch('snackbar/success', 'Usuario editado éxitosamente');
           this.$router.push({ name: 'user.show', params: { id: this.user.id } });
