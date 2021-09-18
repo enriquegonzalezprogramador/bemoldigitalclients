@@ -90,7 +90,7 @@ export default {
   data() {
     return {
       user: {},
-      user2: '',
+      user2: {},
       type: ['Móvil', 'Web'],
       baseFields: {},
       password: '',

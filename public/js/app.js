@@ -3601,7 +3601,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       user: {},
-      user2: '',
+      user2: {},
       type: ['Móvil', 'Web'],
       baseFields: {},
       password: '',
