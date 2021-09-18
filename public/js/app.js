@@ -3601,7 +3601,6 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       user: {},
-      user2: {},
       type: ['Móvil', 'Web'],
       baseFields: {},
       password: '',
@@ -3616,8 +3615,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.$http.get("/user/".concat(this.$route.params.id)).then(function (res) {
-        _this.user = res.data.user;
-        _this.baseFields = _this.user;
+        _this.baseFields = res.data.user;
       })["catch"](function (err) {
         _this.$store.dispatch('snackbar/error', _js_statuses__WEBPACK_IMPORTED_MODULE_0__["default"][err.response.status]);
       });
@@ -3626,16 +3624,16 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.baseFields.confirmed = '1';
-      this.baseFields.password = this.user.password;
+      this.baseFields.confirmed = '1';
       if (this.password) this.baseFields.password = this.password;
-      this.user2.first_name = this.baseFields.first_name;
-      this.user2.last_name = this.baseFields.last_name;
-      this.user2.email = this.baseFields.email;
-      this.user2.password = this.baseFields.password;
-      this.user2.type = this.baseFields.type;
-      this.user2.confirmed = this.baseFields.confirmed;
-      console.log(this.user2);
-      this.$http.patch("/user/".concat(this.user.id), this.user2).then(function (res) {
+      this.user.first_name = this.baseFields.first_name;
+      this.user.last_name = this.baseFields.last_name;
+      this.user.email = this.baseFields.email;
+      this.user.password = this.baseFields.first_name;
+      this.user.confirmed = this.baseFields.confirmed;
+      this.user.type = this.baseFields.type;
+      console.log(this.user);
+      this.$http.patch("/user/".concat(this.user.id), this.user).then(function (res) {
         _this2.$store.dispatch('snackbar/success', 'Usuario editado éxitosamente');
 
         _this2.$router.push({

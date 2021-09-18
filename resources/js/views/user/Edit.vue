@@ -90,7 +90,6 @@ export default {
   data() {
     return {
       user: {},
-      user2: {},
       type: ['Móvil', 'Web'],
       baseFields: {},
       password: '',
@@ -104,8 +103,7 @@ export default {
     findUser() {
       this.$http.get(`/user/${this.$route.params.id}`)
         .then((res) => {
-          this.user = res.data.user;
-          this.baseFields = this.user;
+          this.baseFields = res.data.user;
         })
         .catch((err) => {
           this.$store.dispatch('snackbar/error', statuses[err.response.status]);
@@ -113,17 +111,17 @@ export default {
     },
     edit() {
       this.baseFields.confirmed='1';
-      this.baseFields.password = this.user.password;
+      this.baseFields.confirmed='1';
       if (this.password) this.baseFields.password = this.password;
-      this.user2.first_name=this.baseFields.first_name;
-      this.user2.last_name=this.baseFields.last_name;
-      this.user2.email=this.baseFields.email;
-      this.user2.password=this.baseFields.password;
-      this.user2.type=this.baseFields.type;
-      this.user2.confirmed=this.baseFields.confirmed;
-      console.log(this.user2);
+      this.user.first_name = this.baseFields.first_name;
+      this.user.last_name = this.baseFields.last_name;
+      this.user.email = this.baseFields.email;
+      this.user.password = this.baseFields.first_name;
+      this.user.confirmed = this.baseFields.confirmed;
+      this.user.type = this.baseFields.type;
+      console.log(this.user);
 
-      this.$http.patch(`/user/${this.user.id}`, this.user2)
+      this.$http.patch(`/user/${this.user.id}`, this.user)
         .then((res) => {
           this.$store.dispatch('snackbar/success', 'Usuario editado éxitosamente');
           this.$router.push({ name: 'user.show', params: { id: this.user.id } });
