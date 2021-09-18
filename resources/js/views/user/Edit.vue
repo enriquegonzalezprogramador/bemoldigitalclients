@@ -114,6 +114,7 @@ export default {
       this.baseFields.confirmed='1';
       this.baseFields.password = this.user.password;
       if (this.password) this.baseFields.password = this.password;
+      console.log(this.baseFields);
 
       this.$http.patch(`/user/${this.user.id}`, this.baseFields)
         .then((res) => {
